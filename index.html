@@ -225,7 +225,7 @@ function App() {
       var res = await fetch("/api/diagnose", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1500, system: SYSTEM, messages: messages }),
+        body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 1500, system: SYSTEM, messages: messages }),
       });
       clearInterval(timerRef.current);
       var data = await res.json();
